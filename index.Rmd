@@ -1,0 +1,17 @@
+---
+title: "Plotly Example"
+author: "Daniel Hertenstein"
+date: "January 27, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Check out this plot!
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap='Michelson Speed of Light Data'}
+library(plotly)
+plot_ly(data=morley, x=~as.factor(Expt), y=~Speed, type="box", color=~as.factor(Expt))
+```
